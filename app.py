@@ -122,6 +122,10 @@ def spec_review(_id):
         return jsonify({'response': 'OK'}), 200
 
 
+@app.route('/')
+def index():
+    return jsonify({"response":"Going good", 'statusCode':200}),200
+
 
 @app.errorhandler(BadRequest)
 def gb_bad_request(e):
